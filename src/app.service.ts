@@ -7,7 +7,7 @@ dotenv.config();
 export class AppService {
   async getHello(body: any) {
     try {
-      let sandboxUrl = '';
+      let sandboxUrl = 'http://127.0.0.1:3000/';
       if (body.context.domain.includes('credit')) {
         sandboxUrl = `${process.env.SANDBOXURL}/financial-services/${body.context.action}`;
       } else {
